@@ -18,19 +18,17 @@
   
   
   <title>初学爬虫 | Hexo</title>
-  <meta name="description" content="[TOC] 爬虫基本原理 1、网页请求过程两个环节：（1）Request （请求）：每一个展示在用户面前的网页都必须经过这一步，也就是向服务器发送访问请求。 （2）Response（响应）：服务器在接收到用户的请求后，会验证请求的有效性，然后向用户（客户端）发送响应的内容，客户端接收服务器响应的内容，将内容展示出来，就是我们所熟悉的网页请求。  2、网页请求方式两个方式： GET：最常见的方式，一">
+  <meta name="description" content="[TOC] 一、爬虫基本原理1、网页请求过程两个环节：（1）Request （请求）：每一个展示在用户面前的网页都必须经过这一步，也就是向服务器发送访问请求。 （2）Response（响应）：服务器在接收到用户的请求后，会验证请求的有效性，然后向用户（客户端）发送响应的内容，客户端接收服务器响应的内容，将内容展示出来，就是我们所熟悉的网页请求。 2、网页请求方式两个方式： GET：最常见的方式，一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初学爬虫">
 <meta property="og:url" content="http://example.com/2023/05/28/%E5%88%9D%E5%AD%A6%E7%88%AC%E8%99%AB/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[TOC] 爬虫基本原理 1、网页请求过程两个环节：（1）Request （请求）：每一个展示在用户面前的网页都必须经过这一步，也就是向服务器发送访问请求。 （2）Response（响应）：服务器在接收到用户的请求后，会验证请求的有效性，然后向用户（客户端）发送响应的内容，客户端接收服务器响应的内容，将内容展示出来，就是我们所熟悉的网页请求。  2、网页请求方式两个方式： GET：最常见的方式，一">
+<meta property="og:description" content="[TOC] 一、爬虫基本原理1、网页请求过程两个环节：（1）Request （请求）：每一个展示在用户面前的网页都必须经过这一步，也就是向服务器发送访问请求。 （2）Response（响应）：服务器在接收到用户的请求后，会验证请求的有效性，然后向用户（客户端）发送响应的内容，客户端接收服务器响应的内容，将内容展示出来，就是我们所熟悉的网页请求。 2、网页请求方式两个方式： GET：最常见的方式，一">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:\Users\%E8%A6%83%E5%8D%93%E9%94%8B\Desktop\aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTAxMTcvMi0xWjExRzY0NTFJMDguZ2lm.gif">
 <meta property="article:published_time" content="2023-05-28T12:25:16.380Z">
-<meta property="article:modified_time" content="2023-05-28T12:25:16.381Z">
+<meta property="article:modified_time" content="2023-05-28T12:33:33.254Z">
 <meta property="article:author" content="Q^z^F">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:\Users\%E8%A6%83%E5%8D%93%E9%94%8B\Desktop\aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTAxMTcvMi0xWjExRzY0NTFJMDguZ2lm.gif">
   <!-- Canonical links -->
   <link rel="canonical" href="http://example.com/2023/05/28/%E5%88%9D%E5%AD%A6%E7%88%AC%E8%99%AB/index.html">
   
@@ -329,23 +327,19 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <p>[TOC]</p>
-<h2 id="爬虫基本原理"><a href="#爬虫基本原理" class="headerlink" title="爬虫基本原理"></a>爬虫基本原理</h2><hr>
-<h3 id="1、网页请求过程"><a href="#1、网页请求过程" class="headerlink" title="1、网页请求过程"></a>1、网页请求过程</h3><h4 id="两个环节："><a href="#两个环节：" class="headerlink" title="两个环节："></a>两个环节：</h4><p>（1）Request （请求）：每一个展示在用户面前的网页都必须经过这一步，也就是向服务器发送访问请求。</p>
+<h2 id="一、爬虫基本原理"><a href="#一、爬虫基本原理" class="headerlink" title="一、爬虫基本原理"></a>一、爬虫基本原理</h2><h3 id="1、网页请求过程"><a href="#1、网页请求过程" class="headerlink" title="1、网页请求过程"></a>1、网页请求过程</h3><h4 id="两个环节："><a href="#两个环节：" class="headerlink" title="两个环节："></a>两个环节：</h4><p>（1）Request （请求）：每一个展示在用户面前的网页都必须经过这一步，也就是向服务器发送访问请求。</p>
 <p>（2）Response（响应）：服务器在接收到用户的请求后，会验证请求的有效性，然后向用户（客户端）发送响应的内容，客户端接收服务器响应的内容，将内容展示出来，就是我们所熟悉的网页请求。</p>
-<p><img src="C:\Users\覃卓锋\Desktop\aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTAxMTcvMi0xWjExRzY0NTFJMDguZ2lm.gif" alt="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC91cGxvYWRzL2FsbGltZy8xOTAxMTcvMi0xWjExRzY0NTFJMDguZ2lm"></p>
 <h3 id="2、网页请求方式"><a href="#2、网页请求方式" class="headerlink" title="2、网页请求方式"></a>2、网页请求方式</h3><h4 id="两个方式："><a href="#两个方式：" class="headerlink" title="两个方式："></a>两个方式：</h4><ol>
 <li>GET：最常见的方式，一般用于获取或者查询资源信息，也是大多数网站使用的方式，响应速度快。</li>
 <li>POST：相比 GET 方式，多了以表单形式上传参数的功能，因此除查询信息外，还可以修改信息。</li>
 </ol>
-<h2 id="网页结构"><a href="#网页结构" class="headerlink" title="网页结构"></a>网页结构</h2><hr>
-<h4 id="三部分组成"><a href="#三部分组成" class="headerlink" title="三部分组成"></a>三部分组成</h4><p><em>HTML（超文本标记语言）</em></p>
+<h2 id="二、网页结构"><a href="#二、网页结构" class="headerlink" title="二、网页结构"></a>二、网页结构</h2><h4 id="三部分组成"><a href="#三部分组成" class="headerlink" title="三部分组成"></a>三部分组成</h4><p><em>HTML（超文本标记语言）</em></p>
 <p><em>CSS（层叠样式表）</em></p>
 <p><em>JScript（活动脚本语言）</em></p>
 <h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><p>HTML 是整个网页的结构，相当于整个网站的框架。带“＜”、“＞”符号的都是属于 HTML 的标签，并且标签都是成对出现的。</p>
 <h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><p>CSS通常称为CSS样式表或层叠样式表（级联样式表），主要用于设置HTML页面中的文本内容（字体、大小、对齐方式等）、图片的外形（宽高、边框样式、边距等）以及版面的布局等外观显示样式。<br>CSS以HTML为基础，提供了丰富的功能，如字体、颜色、背景的控制及整体排版等，而且还可以针对不同的浏览器设置不同的样式。</p>
 <h4 id="JScript"><a href="#JScript" class="headerlink" title="JScript"></a>JScript</h4><p>JScript 表示功能。交互的内容和各种特效都在 JScript 中，JScript 描述了网站中的各种功能。</p>
-<h2 id="Pycharm爬虫需要初步安装的库"><a href="#Pycharm爬虫需要初步安装的库" class="headerlink" title="Pycharm爬虫需要初步安装的库"></a>Pycharm爬虫需要初步安装的库</h2><hr>
-<p><strong>1、requests</strong>（获取请求）</p>
+<h2 id="三、Pycharm爬虫需要初步安装的库"><a href="#三、Pycharm爬虫需要初步安装的库" class="headerlink" title="三、Pycharm爬虫需要初步安装的库"></a>三、Pycharm爬虫需要初步安装的库</h2><p><strong>1、requests</strong>（获取请求）</p>
 <p><strong>2、BeautifulSoup（bs4</strong>）(从网页中抓取数据）</p>
 <p><strong>3、lxml</strong>（解析器，功能更加强大、速度更快）</p>
 <p><strong>4、pandas</strong>（Python的核心数据分析支持库，提供了快速、灵活、明确的数据结构，旨在简单、直观的处理关系型、标记型数据）</p>
